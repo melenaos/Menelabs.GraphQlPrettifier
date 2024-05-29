@@ -23,7 +23,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Content Include="..\Graphics\logo.png" Link="logo.png" />
+	  <Content Include="..\Graphics\logo.png" Link="logo.png"  CopyToOutputDirectory="PreserveNewest"/>
 	</ItemGroup>
 
 	<ItemGroup>
