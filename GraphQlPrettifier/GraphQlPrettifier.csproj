@@ -16,11 +16,16 @@
 		<PackageProjectUrl>https://github.com/melenaos/Menelabs.GraphQlPrettifier</PackageProjectUrl>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageIcon>logo.png</PackageIcon>
-		<PackageReadmeFile>https://raw.githubusercontent.com/melenaos/Menelabs.GraphQlPrettifier/main/README.md</PackageReadmeFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 		
 		<!-- A list of tags to help the search engine to understand the content of the package -->
 		<PackageTags>GraphQl, Prettify</PackageTags>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <Content Include="..\Graphics\logo.png" Pack="true" PackagePath="" Link="logo.png" />
+		<None Include="..\README.md" Pack="true" PackagePath="" Link="README.md" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1">
@@ -32,5 +37,7 @@
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
 	</ItemGroup>
+
+	
 
 </Project>
