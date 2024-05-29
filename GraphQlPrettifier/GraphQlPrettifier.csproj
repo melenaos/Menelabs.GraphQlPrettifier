@@ -20,6 +20,7 @@
 		
 		<!-- A list of tags to help the search engine to understand the content of the package -->
 		<PackageTags>GraphQl, Prettify</PackageTags>
+		<AssemblyName>Menelabs.$(MSBuildProjectName)</AssemblyName>
 	</PropertyGroup>
 
 	<ItemGroup>
