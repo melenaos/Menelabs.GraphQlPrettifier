@@ -15,20 +15,12 @@
 		<Description>Prettify a GraphQl query</Description>
 		<PackageProjectUrl>https://github.com/melenaos/Menelabs.GraphQlPrettifier</PackageProjectUrl>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-		<PackageIcon>logo.png</PackageIcon>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageIcon>..\Graphics\logo.png</PackageIcon>
+		<PackageReadmeFile>..\README.md</PackageReadmeFile>
 
 		<!-- A list of tags to help the search engine to understand the content of the package -->
 		<PackageTags>GraphQl, Prettify</PackageTags>
 	</PropertyGroup>
-
-	<ItemGroup>
-	  <Content Include="..\Graphics\logo.png" Link="logo.png"  CopyToOutputDirectory="PreserveNewest"/>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <None Include="..\README.md" Link="README.md" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="DotNet.ReproducibleBuilds" Version="1.1.1">
