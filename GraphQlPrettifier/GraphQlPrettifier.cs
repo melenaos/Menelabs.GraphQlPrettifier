@@ -15,13 +15,18 @@ namespace Menelabs
         {
             Clear();
 
+            // Run all query and copy char by char
+            //  During this process, prettify the output using spaces and newlines
 
             for (int i = 0; i < graphQl.Length; i++)
             {
                 var ch = graphQl[i];
-                if (ch == '{')
+
+                // Opening { means that it starts a new section,
+                //  prepend a space and change line.
+                // Don't change line if it's within an argument
+                if (ch == '{' && stateMachine != StateMachine.Args)
                 {
-                    stateMachine = StateMachine.Fields;
                     // prepend a space on {
                     if (i - 1 > 0 && graphQl[i - 1] != ' ')
                         Append(' ');
@@ -31,8 +36,12 @@ namespace Menelabs
                     // and append a newline
                     Indent();
                     AppendLine();
+                    stateMachine = StateMachine.Fields;
                 }
-                else if (ch == '}')
+                // Closing } means that the section is over.
+                //  outdent and change line.
+                // Don't change line if it's within an argument
+                else if (ch == '}' && stateMachine != StateMachine.Args)
                 {
                     // prepend a newline
                     Outdent();
@@ -43,12 +52,10 @@ namespace Menelabs
                 }
                 else if (ch == ' ')
                 {
-                    char lastChar = ch;
                     // skip multiple spaces
                     for (i++; i < graphQl.Length; i++)
                     {
-                        lastChar = graphQl[i];
-                        if (lastChar != ' ')
+                        if (graphQl[i] != ' ')
                             break;
                     }
 
@@ -91,7 +98,6 @@ namespace Menelabs
 
                     Append(ch);
                 }
-
                 else
                 {
                     Append(ch);

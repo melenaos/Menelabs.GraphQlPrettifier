@@ -78,6 +78,28 @@ pretty);
         }
 
         [Fact]
+        public void NestedObjectsWithObjectArguments()
+        {
+            var prettifier = ProvidePrettifier();
+            var pretty = prettifier.Prettify("query{order(id:\"gid:unique_id\"){name id image(transformation:{size:BIG,maxWidth:1000}){width height url}product title}}");
+
+            Assert.Equal(@"query {
+  order(id: ""gid:unique_id"") {
+    name
+    id
+    image(transformation: {size: BIG, maxWidth: 1000}) {
+      width
+      height
+      url
+    }
+    product
+    title
+  }
+}",
+pretty);
+        }
+
+        [Fact]
         public void MultipleArgs()
         {
             var prettifier = ProvidePrettifier();
