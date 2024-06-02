@@ -12,14 +12,14 @@
 		<NoWarn>$(NoWarn);CS1591</NoWarn>
 
 		<Authors>Menelaos Vergis</Authors>
-		<Description>Prettify a GraphQl query</Description>
+		<Description>Prettify a GraphQL query</Description>
 		<PackageProjectUrl>https://github.com/melenaos/Menelabs.GraphQlPrettifier</PackageProjectUrl>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageIcon>logo.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		
 		<!-- A list of tags to help the search engine to understand the content of the package -->
-		<PackageTags>GraphQl, Prettify</PackageTags>
+		<PackageTags>GraphQL, Prettify</PackageTags>
 		<AssemblyName>Menelabs.$(MSBuildProjectName)</AssemblyName>
 	</PropertyGroup>
 
